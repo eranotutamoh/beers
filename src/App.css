@@ -19,6 +19,13 @@
   color: #333;
 }
 
+button.option-a {
+  background-color: pink;
+}
+button.option-b {
+  background-color: lime;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
