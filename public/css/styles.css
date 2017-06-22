@@ -1,0 +1,52 @@
+body {
+  background-color: beige;
+  font-family: 'Monda', serif;
+  text-align: center; }
+
+.wrap {
+  margin: 0 auto; }
+
+h1 {
+  margin: 0;
+  display: none; }
+
+h2 {
+  margin: 0; }
+
+.beer_form {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  z-index: 100; }
+  .beer_form section {
+    flex: 1 0 auto;
+    border: 2px solid orange;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 5px 0; }
+    .beer_form section:last-child {
+      margin-bottom: 0; }
+    .beer_form section label {
+      font-family: 'Gochi Hand',  cursive;
+      display: block;
+      height: 33px; }
+
+.beer_list {
+  position: relative;
+  z-index: 1; }
+
+nav {
+  position: fixed;
+  z-index: 10;
+  background-color: darkorange;
+  padding: 5px;
+  width: 100%; }
+  nav a {
+    color: white;
+    font-family: 'Gochi Hand',  cursive;
+    font-size: 1.2em;
+    text-decoration: none; }
+
+/*# sourceMappingURL=styles.css.map */

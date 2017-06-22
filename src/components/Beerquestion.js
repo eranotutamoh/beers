@@ -2,10 +2,10 @@ import React from 'react'
 
 const BeerQuestion = (props) => {
     return (
-        <button className={props.status ? 'option-a' : 'option-b'}  onClick={() =>  props.onClick(props.parameter)}>
-            <p>{props.title}</p>
+        <section className={props.status ? 'option_a' : 'option-b'}  onClick={() =>  props.onClick(props.parameter)}>
+            <label>{props.title}</label>
             <span>{props.optionA}</span> <span>{props.optionB}</span>
-        </button>
+        </section>
     );
 }
 
