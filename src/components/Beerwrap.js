@@ -8,11 +8,23 @@ class BeerWrap extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            parameters: {pm : true, tax: false, weekend: false, food: ''},
+            parameters: {am : false, tax: false, weekend: true, food: ''},
             beerList: [],
             loading: false
         }
        this.changeParameters = this.changeParameters.bind(this)
+    }
+
+    componentDidMount() {
+        this.initApp();
+    }
+
+    initApp() {
+        const dateNow = new Date();
+        const dayOfWeek =  dateNow.getDay()
+        const hourOfDay = dateNow.getHours()
+        if(dayOfWeek !== 0 && dayOfWeek < 6 ) this.changeParameters('weekend')
+        if(hourOfDay < 12 ) this.changeParameters('am')
     }
 
     render(){
@@ -35,25 +47,19 @@ class BeerWrap extends Component {
     changeParameters(param, foodvalue){
         let newState = this.state.parameters
         newState[param] = (param === 'food') ? foodvalue :  !this.state.parameters[param]
-        this.setState({...this.state, loading: true, newState})
+        this.setState({...this.state, loading: true, parameters: newState})
         this.getBeerList()
     }
 
 
     getBeerList() {
         const query = this.queryString()
-        API.getBeers(query, data => this.refreshBeerList(data))
-    }
-
-    refreshBeerList(data) {
-        let newState = this.state
-        newState.beerList = data
-        this.setState({...this.state, loading: false, newState})
+        API.getBeers(query, data => this.setState({beerList: data, loading: false}))
     }
 
     queryString() {
         const food = (this.state.parameters.food)
-        const ebc = (this.state.parameters.pm) ? 'ebc_gt=30' : 'ebc_lt=10'
+        const ebc = (this.state.parameters.am) ? 'ebc_lt=10' : 'ebc_gt=30'
         const ibu = (this.state.parameters.tax) ? '&ibu_gt=50' : ''
         const abv = (this.state.parameters.weekend) ? 'abv_gt=6' : 'abv_lt=4'
         const foodQuery = (food) ? `&food=${food}` : ''

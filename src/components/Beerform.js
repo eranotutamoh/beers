@@ -3,13 +3,13 @@ import BeerQuestion from './Beerquestion'
 
 const BeerForm = (props) => {
     let foodString
-    const questions = [{title: 'Are you drinking in the morning or the afternoon?',
+    const questions = [{title: 'A beer for AM or PM?',
         options:{A: 'am', B: 'pm'},
-        parameter: 'pm',
-        status: props.params.pm
+        parameter: 'am',
+        status: props.params.am
     },
-        {title: 'Are you drinking in the weekend?',
-            options:{A: 'yes', B: 'no'},
+        {title: 'A beer for weekend or week-day?',
+            options:{A: 'weekend', B: 'week-day'},
             parameter: 'weekend',
             status: props.params.weekend
         },
@@ -33,7 +33,7 @@ const BeerForm = (props) => {
                     onClick={(parameter) =>  props.onClick(parameter)}
                 />
             )}
-            <section>
+            <section className="food">
                 <label>Enter a food</label>
                 <input type="text" ref={node => foodString = node} placeholder="enter a food to match" value={props.params.food} onChange={handleChange} />
                 <button onClick={() => clear()}>Clear</button>
@@ -50,7 +50,6 @@ const BeerForm = (props) => {
         foodString.focus()
         props.clearFood()
     }
-
 
 }
 

@@ -11,13 +11,24 @@ const BeerList = (props) => {
             <Beer
                 key={beer.id}
                 name={beer.name}
-
+                img={beer.image_url}
+                tag={beer.tagline}
+                desc={beer.description}
+                foods={beer.food_pairing}
+                abv={beer.abv}
+                ibu={beer.ibu}
+                ebc={beer.ebc}
+                ph={beer.ph}
+                ingredients={beer.ingredients}
+                tips={beer.brewers_tips}
             />
 
 
             )}
         </div>
     );
+
+
 }
 
 export default BeerList

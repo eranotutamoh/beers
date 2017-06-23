@@ -4,38 +4,8 @@ body {
   text-align: center; }
 
 .wrap {
-  margin: 0 auto; }
-
-h1 {
-  margin: 0;
-  display: none; }
-
-h2 {
-  margin: 0; }
-
-.beer_form {
-  background-color: white;
-  display: flex;
-  flex-flow: column nowrap;
-  position: relative;
-  z-index: 100; }
-  .beer_form section {
-    flex: 1 0 auto;
-    border: 2px solid orange;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 15px;
-    margin: 5px 0; }
-    .beer_form section:last-child {
-      margin-bottom: 0; }
-    .beer_form section label {
-      font-family: 'Gochi Hand',  cursive;
-      display: block;
-      height: 33px; }
-
-.beer_list {
-  position: relative;
-  z-index: 1; }
+  margin: 0 auto;
+  max-width: 1024px; }
 
 nav {
   position: fixed;
@@ -48,5 +18,142 @@ nav {
     font-family: 'Gochi Hand',  cursive;
     font-size: 1.2em;
     text-decoration: none; }
+
+h1 {
+  margin: 0;
+  display: none; }
+
+h3, h4, h5, ol, p {
+  margin: 0;
+  font-size: 14px; }
+
+.beer_form {
+  background-color: beige;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 5px;
+  position: relative;
+  z-index: 100; }
+  .beer_form section {
+    background-color: white;
+    flex: 1 0 auto;
+    border: 2px solid orange;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 5px 0;
+    height: 50px; }
+    .beer_form section span {
+      transition: font-size 2s; }
+    .beer_form section.option_a {
+      background-color: #f7f379; }
+      .beer_form section.option_a span.opt_a {
+        font-size: 1.5em; }
+      .beer_form section.option_a span.opt_b {
+        font-size: 0.7em; }
+    .beer_form section.option_b {
+      background-color: #9ddce6; }
+      .beer_form section.option_b span.opt_b {
+        font-size: 1.5em; }
+      .beer_form section.option_b span.opt_a {
+        font-size: 0.7em; }
+    .beer_form section:last-child {
+      margin-bottom: 0; }
+    .beer_form section label {
+      font-family: 'Gochi Hand',  cursive;
+      display: block; }
+    .beer_form section.food button {
+      border: 1px solid #999;
+      background-color: white;
+      margin-left: 10px;
+      border-radius: 4px;
+      padding: 5px; }
+    .beer_form section.food input {
+      border: 1px solid #999;
+      font-size: 13px;
+      padding: 4px;
+      width: 140px; }
+
+.beer_list {
+  position: relative;
+  z-index: 1;
+  padding: 0 5px; }
+  .beer_list h2 {
+    margin: 10px 0 5px; }
+  .beer_list section {
+    display: flex;
+    text-align: left; }
+    .beer_list section article {
+      padding-left: 15px;
+      font-size: .8em !important; }
+      .beer_list section article .recipe {
+        margin-bottom: 15px; }
+        .beer_list section article .recipe > div {
+          transition: height 500ms 200ms, opacity 1000ms 200ms;
+          opacity: 0.0;
+          height: 0px; }
+        .beer_list section article .recipe .open {
+          height: 400px;
+          opacity: 1.0;
+          overflow-y: scroll; }
+        .beer_list section article .recipe .close {
+          height: 0px;
+          opacity: 0.0;
+          overflow: hidden; }
+        .beer_list section article .recipe dd, .beer_list section article .recipe dt {
+          display: inline-block; }
+        .beer_list section article .recipe dd {
+          width: 65%;
+          margin: 0 0 10px 0; }
+        .beer_list section article .recipe dt {
+          width: 30%; }
+      .beer_list section article h3 {
+        background-color: #666;
+        padding: 0 5px;
+        color: wheat; }
+      .beer_list section article h4 {
+        color: maroon; }
+      .beer_list section article button {
+        font-size: 1.1em;
+        text-decoration: none;
+        margin: 10px 5px 15px 0;
+        border: 2px solid orange;
+        padding: 5px;
+        text-align: center;
+        background: wheat;
+        border-radius: 4px; }
+    .beer_list section .img {
+      flex: 0 0 70px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 5px 0 0;
+      height: 200px; }
+
+@media (min-width: 480px) and (max-width: 798px) {
+  .beer_form {
+    flex-flow: row wrap;
+    font-size: .9em; }
+    .beer_form section {
+      flex: 1 0 45%;
+      padding: 5px;
+      margin: 8px 1% 0 1%; } }
+@media (min-width: 799px) {
+  nav {
+    width: 270px;
+    margin-left: 2px; }
+
+  .wrap {
+    display: flex; }
+
+  .beer_form {
+    height: 321px;
+    display: block;
+    padding-top: 20px; }
+    .beer_form section {
+      height: 60px;
+      width: 250px; }
+
+  .beer_list {
+    margin: 0 5%; } }
 
 /*# sourceMappingURL=styles.css.map */
