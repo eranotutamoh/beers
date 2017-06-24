@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BeerForm from './Beerform'
-import BeerList from './Beerlist'
+import BeerForm from './beerform/'
+import BeerList from './beerlist/'
 import API from '../service/beersApi'
 
 class BeerWrap extends Component {
@@ -13,6 +13,7 @@ class BeerWrap extends Component {
             loading: false
         }
        this.changeParameters = this.changeParameters.bind(this)
+       this.apiError = ''
     }
 
     componentDidMount() {
@@ -25,6 +26,8 @@ class BeerWrap extends Component {
         const hourOfDay = dateNow.getHours()
         if(dayOfWeek !== 0 && dayOfWeek < 6 ) this.changeParameters('weekend')
         if(hourOfDay < 12 ) this.changeParameters('am')
+        // if initial parameters not altered then call first api call
+        if(!this.state.parameters.am && this.state.parameters.weekend) this.getBeerList()
     }
 
     render(){
@@ -37,9 +40,11 @@ class BeerWrap extends Component {
                           onChange={(foodvalue) => this.changeParameters('food', foodvalue)}
                           clearFood={() => this.changeParameters('food', '')}
                 />
+                {this.apiError ||
                 <BeerList beers={this.state.beerList}
                           loading={this.state.loading}
                 />
+                }
             </div>
         );
     }
@@ -54,7 +59,11 @@ class BeerWrap extends Component {
 
     getBeerList() {
         const query = this.queryString()
-        API.getBeers(query, data => this.setState({beerList: data, loading: false}))
+        API.getBeers(query, data => {
+            if('Error' in data) this.apiError = (<h2 className='error'>{data.Error}</h2>)
+            this.setState({beerList: data, loading: false})
+
+        })
     }
 
     queryString() {

@@ -1,19 +1,24 @@
 import React from 'react';
 import BeerQuestion from './Beerquestion'
+import PropTypes from 'prop-types'
 
 const BeerForm = (props) => {
     let foodString
-    const questions = [{title: 'A beer for AM or PM?',
-        options:{A: 'am', B: 'pm'},
-        parameter: 'am',
-        status: props.params.am
-    },
-        {title: 'A beer for weekend or week-day?',
+    const questions = [
+        {
+            title: 'A beer for AM or PM?',
+            options:{A: 'am', B: 'pm'},
+            parameter: 'am',
+            status: props.params.am
+        },
+        {
+            title: 'A beer for weekend or week-day?',
             options:{A: 'weekend', B: 'week-day'},
             parameter: 'weekend',
             status: props.params.weekend
         },
-        {title: 'Are you running tax reports?',
+        {
+            title: 'Are you running tax reports?',
             options:{A: 'yes', B: 'no'},
             parameter: 'tax',
             status: props.params.tax
@@ -52,5 +57,9 @@ const BeerForm = (props) => {
     }
 
 }
+
+BeerForm.propTypes = {
+    params: PropTypes.object.isRequired
+};
 
 export default BeerForm;

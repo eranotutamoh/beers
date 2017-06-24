@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BrewingNotes from './Brewingnotes'
+import PropTypes from 'prop-types'
 
 class Beer extends Component {
 
@@ -21,7 +22,7 @@ class Beer extends Component {
                     <p>{this.props.desc}</p>
                     <h5>Food pairings:</h5>
                     <ol>{foods}</ol>
-                    <button onClick={this.updateView}>View technical notes and recipe</button>
+                    <button onClick={this.updateView}>View technical notes</button>
 
                     <div className="recipe" >
                         <BrewingNotes
@@ -31,7 +32,9 @@ class Beer extends Component {
                             ebc={this.props.ebc}
                             ph={this.props.ph}
                             malts={this.props.ingredients.malt}
+                            hops={this.props.ingredients.hops}
                             tips={this.props.tips}
+                            yeast={this.props.ingredients.yeast}
                         />
                     </div>
                 </article>
@@ -43,5 +46,22 @@ class Beer extends Component {
         this.setState({reveal: !this.state.reveal})
     }
 }
+
+Beer.propTypes = {
+    img: PropTypes.string,
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    desc: PropTypes.string,
+    abv: PropTypes.number,
+    ibu: PropTypes.number,
+    ebc: PropTypes.number,
+    ph: PropTypes.number,
+    foods: PropTypes.array,
+    malts: PropTypes.array,
+    hops: PropTypes.array,
+    tips: PropTypes.string,
+    yeast: PropTypes.string,
+};
+
 
 export default Beer

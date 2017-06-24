@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a beer 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="beer_form"
+>
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="am"
+        optionB="pm"
+        parameter="am"
+        status={false}
+        title="A beer for AM or PM?"
+    />
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="weekend"
+        optionB="week-day"
+        parameter="weekend"
+        status={true}
+        title="A beer for weekend or week-day?"
+    />
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="yes"
+        optionB="no"
+        parameter="tax"
+        status={false}
+        title="Are you running tax reports?"
+    />
+    <section
+        className="food"
+    >
+        <label>
+            Enter a food
+        </label>
+        <input
+            onChange={[Function]}
+            placeholder="enter a food to match"
+            type="text"
+            value=""
+        />
+        <button
+            onClick={[Function]}
+        >
+            Clear
+        </button>
+    </section>
+</div>,
+  "nodes": Array [
+    <div
+      className="beer_form"
+>
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="am"
+            optionB="pm"
+            parameter="am"
+            status={false}
+            title="A beer for AM or PM?"
+      />
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="weekend"
+            optionB="week-day"
+            parameter="weekend"
+            status={true}
+            title="A beer for weekend or week-day?"
+      />
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="yes"
+            optionB="no"
+            parameter="tax"
+            status={false}
+            title="Are you running tax reports?"
+      />
+      <section
+            className="food"
+      >
+            <label>
+                  Enter a food
+            </label>
+            <input
+                  onChange={[Function]}
+                  placeholder="enter a food to match"
+                  type="text"
+                  value=""
+            />
+            <button
+                  onClick={[Function]}
+            >
+                  Clear
+            </button>
+      </section>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <BeerForm
+        clearFood={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        params={
+                Object {
+                        "am": false,
+                        "food": "",
+                        "tax": false,
+                        "weekend": true,
+                      }
+        }
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "clearFood": [Function],
+          "onChange": [Function],
+          "onClick": [Function],
+          "params": Object {
+            "am": false,
+            "food": "",
+            "tax": false,
+            "weekend": true,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="beer_form"
+>
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="am"
+                    optionB="pm"
+                    parameter="am"
+                    status={false}
+                    title="A beer for AM or PM?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="weekend"
+                    optionB="week-day"
+                    parameter="weekend"
+                    status={true}
+                    title="A beer for weekend or week-day?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="yes"
+                    optionB="no"
+                    parameter="tax"
+                    status={false}
+                    title="Are you running tax reports?"
+          />
+          <section
+                    className="food"
+          >
+                    <label>
+                              Enter a food
+                    </label>
+                    <input
+                              onChange={[Function]}
+                              placeholder="enter a food to match"
+                              type="text"
+                              value=""
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Clear
+                    </button>
+          </section>
+</div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          className="beer_form"
+>
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="am"
+                    optionB="pm"
+                    parameter="am"
+                    status={false}
+                    title="A beer for AM or PM?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="weekend"
+                    optionB="week-day"
+                    parameter="weekend"
+                    status={true}
+                    title="A beer for weekend or week-day?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="yes"
+                    optionB="no"
+                    parameter="tax"
+                    status={false}
+                    title="Are you running tax reports?"
+          />
+          <section
+                    className="food"
+          >
+                    <label>
+                              Enter a food
+                    </label>
+                    <input
+                              onChange={[Function]}
+                              placeholder="enter a food to match"
+                              type="text"
+                              value=""
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Clear
+                    </button>
+          </section>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <BeerForm
+    clearFood={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    params={
+        Object {
+            "am": false,
+            "food": "",
+            "tax": false,
+            "weekend": true,
+          }
+    }
+/>,
+}
+`;
+
+exports[`should render a beer form 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="beer_form"
+>
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="am"
+        optionB="pm"
+        parameter="am"
+        status={false}
+        title="A beer for AM or PM?"
+    />
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="weekend"
+        optionB="week-day"
+        parameter="weekend"
+        status={true}
+        title="A beer for weekend or week-day?"
+    />
+    <BeerQuestion
+        onClick={[Function]}
+        optionA="yes"
+        optionB="no"
+        parameter="tax"
+        status={false}
+        title="Are you running tax reports?"
+    />
+    <section
+        className="food"
+    >
+        <label>
+            Enter a food
+        </label>
+        <input
+            onChange={[Function]}
+            placeholder="enter a food to match"
+            type="text"
+            value=""
+        />
+        <button
+            onClick={[Function]}
+        >
+            Clear
+        </button>
+    </section>
+</div>,
+  "nodes": Array [
+    <div
+      className="beer_form"
+>
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="am"
+            optionB="pm"
+            parameter="am"
+            status={false}
+            title="A beer for AM or PM?"
+      />
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="weekend"
+            optionB="week-day"
+            parameter="weekend"
+            status={true}
+            title="A beer for weekend or week-day?"
+      />
+      <BeerQuestion
+            onClick={[Function]}
+            optionA="yes"
+            optionB="no"
+            parameter="tax"
+            status={false}
+            title="Are you running tax reports?"
+      />
+      <section
+            className="food"
+      >
+            <label>
+                  Enter a food
+            </label>
+            <input
+                  onChange={[Function]}
+                  placeholder="enter a food to match"
+                  type="text"
+                  value=""
+            />
+            <button
+                  onClick={[Function]}
+            >
+                  Clear
+            </button>
+      </section>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <BeerForm
+        clearFood={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        params={
+                Object {
+                        "am": false,
+                        "food": "",
+                        "tax": false,
+                        "weekend": true,
+                      }
+        }
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "clearFood": [Function],
+          "onChange": [Function],
+          "onClick": [Function],
+          "params": Object {
+            "am": false,
+            "food": "",
+            "tax": false,
+            "weekend": true,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="beer_form"
+>
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="am"
+                    optionB="pm"
+                    parameter="am"
+                    status={false}
+                    title="A beer for AM or PM?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="weekend"
+                    optionB="week-day"
+                    parameter="weekend"
+                    status={true}
+                    title="A beer for weekend or week-day?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="yes"
+                    optionB="no"
+                    parameter="tax"
+                    status={false}
+                    title="Are you running tax reports?"
+          />
+          <section
+                    className="food"
+          >
+                    <label>
+                              Enter a food
+                    </label>
+                    <input
+                              onChange={[Function]}
+                              placeholder="enter a food to match"
+                              type="text"
+                              value=""
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Clear
+                    </button>
+          </section>
+</div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          className="beer_form"
+>
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="am"
+                    optionB="pm"
+                    parameter="am"
+                    status={false}
+                    title="A beer for AM or PM?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="weekend"
+                    optionB="week-day"
+                    parameter="weekend"
+                    status={true}
+                    title="A beer for weekend or week-day?"
+          />
+          <BeerQuestion
+                    onClick={[Function]}
+                    optionA="yes"
+                    optionB="no"
+                    parameter="tax"
+                    status={false}
+                    title="Are you running tax reports?"
+          />
+          <section
+                    className="food"
+          >
+                    <label>
+                              Enter a food
+                    </label>
+                    <input
+                              onChange={[Function]}
+                              placeholder="enter a food to match"
+                              type="text"
+                              value=""
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Clear
+                    </button>
+          </section>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <BeerForm
+    clearFood={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    params={
+        Object {
+            "am": false,
+            "food": "",
+            "tax": false,
+            "weekend": true,
+          }
+    }
+/>,
+}
+`;
+
+exports[`should render a beer list 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="beer_list"
+>
+    <h2>
+        ... loading beers
+    </h2>
+</div>,
+  "nodes": Array [
+    <div
+      className="beer_list"
+>
+      <h2>
+            ... loading beers
+      </h2>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <BeerList
+        beers={Array []}
+        loading={
+                Object {
+                        "loading": false,
+                      }
+        }
+/>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "beers": Array [],
+          "loading": Object {
+            "loading": false,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="beer_list"
+>
+          <h2>
+                    ... loading beers
+          </h2>
+</div>,
+        "_debugID": 6,
+        "_renderedOutput": <div
+          className="beer_list"
+>
+          <h2>
+                    ... loading beers
+          </h2>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <BeerList
+    beers={Array []}
+    loading={
+        Object {
+            "loading": false,
+          }
+    }
+/>,
+}
+`;
+
+exports[`should render a nav 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <nav>
+    <a
+        href="#top"
+    >
+        Choose your beer!!!
+    </a>
+</nav>,
+  "nodes": Array [
+    <nav>
+      <a
+            href="#top"
+      >
+            Choose your beer!!!
+      </a>
+</nav>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": null,
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <nav>
+    <a
+        href="#top"
+    >
+        Choose your beer!!!
+    </a>
+</nav>,
+}
+`;

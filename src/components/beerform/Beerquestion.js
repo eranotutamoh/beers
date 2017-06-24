@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const BeerQuestion = (props) => {
     return (
@@ -8,6 +9,13 @@ const BeerQuestion = (props) => {
         </section>
     );
 }
+
+BeerQuestion.propTypes = {
+    status: PropTypes.bool.isRequired,
+    parameter: PropTypes.string.isRequired,
+    optionA: PropTypes.string.isRequired,
+    optionB: PropTypes.string.isRequired
+};
 
 export default BeerQuestion;
 

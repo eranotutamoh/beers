@@ -12,7 +12,7 @@ function checkStatus(response) {
         return response.json();
     } else {
         console.log('API error:', response)
-        return {Error: `We're having a little trouble accessing your beers at the moment, try again later.`};
+        return {Error: `We're having a little trouble accessing your beers at the moment, please try again later.`};
     }
 }
 

@@ -23,9 +23,12 @@ h1 {
   margin: 0;
   display: none; }
 
-h3, h4, h5, ol, p {
+h3, h4, h5, ol, p, dl {
   margin: 0;
   font-size: 14px; }
+
+.error {
+  color: maroon; }
 
 .beer_form {
   background-color: beige;
@@ -77,36 +80,55 @@ h3, h4, h5, ol, p {
 .beer_list {
   position: relative;
   z-index: 1;
-  padding: 0 5px; }
+  padding: 0 5px;
+  width: 100%; }
   .beer_list h2 {
     margin: 10px 0 5px; }
   .beer_list section {
     display: flex;
     text-align: left; }
     .beer_list section article {
+      flex: 3 0 100%;
       padding-left: 15px;
-      font-size: .8em !important; }
+      font-size: .8em !important;
+      /*End recipe*/ }
       .beer_list section article .recipe {
         margin-bottom: 15px; }
-        .beer_list section article .recipe > div {
-          transition: height 500ms 200ms, opacity 1000ms 200ms;
-          opacity: 0.0;
-          height: 0px; }
-        .beer_list section article .recipe .open {
-          height: 400px;
-          opacity: 1.0;
-          overflow-y: scroll; }
-        .beer_list section article .recipe .close {
-          height: 0px;
-          opacity: 0.0;
-          overflow: hidden; }
+        .beer_list section article .recipe .table_wrap {
+          overflow-x: scroll; }
+        .beer_list section article .recipe h5 {
+          font-size: 1.2em;
+          font-weight: bold;
+          margin-top: 20px; }
         .beer_list section article .recipe dd, .beer_list section article .recipe dt {
           display: inline-block; }
         .beer_list section article .recipe dd {
-          width: 65%;
+          width: 80%;
           margin: 0 0 10px 0; }
         .beer_list section article .recipe dt {
-          width: 30%; }
+          font-weight: bold;
+          border-bottom: 1px dashed #CCC;
+          text-transform: uppercase;
+          width: 20%; }
+        .beer_list section article .recipe table {
+          border-bottom: 1px solid #999;
+          white-space: nowrap; }
+        .beer_list section article .recipe th {
+          background-color: #ccc; }
+        .beer_list section article .recipe th, .beer_list section article .recipe td {
+          padding: 0 5px;
+          border-right: 2px solid white; }
+        .beer_list section article .recipe > div {
+          transition: height 500ms 200ms, opacity 200ms 200ms;
+          opacity: 0.0;
+          height: 0px;
+          overflow-y: scroll; }
+        .beer_list section article .recipe .open {
+          height: 400px;
+          opacity: 1.0; }
+        .beer_list section article .recipe .close {
+          height: 0px;
+          opacity: 0.0; }
       .beer_list section article h3 {
         background-color: #666;
         padding: 0 5px;
@@ -123,12 +145,18 @@ h3, h4, h5, ol, p {
         background: wheat;
         border-radius: 4px; }
     .beer_list section .img {
-      flex: 0 0 70px;
+      flex: 1 0 10%;
       background-size: contain;
       background-repeat: no-repeat;
       margin: 5px 0 0;
       height: 200px; }
 
+@media (max-width: 480px) {
+  .beer_list section article .recipe {
+    margin-left: -80px; }
+
+  .table_wrap {
+    width: 300px; } }
 @media (min-width: 480px) and (max-width: 798px) {
   .beer_form {
     flex-flow: row wrap;
