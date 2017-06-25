@@ -37,9 +37,10 @@ h3, h4, h5, ol, p, dl {
   background-color: beige;
   display: flex;
   flex-flow:  column nowrap;
-  padding: 0 5px;
+  padding: 0 2%;
   position:relative;
   z-index: 100;
+  width: 96%;
   section {
     background-color: white;
     flex: 1 0 auto;
@@ -99,106 +100,110 @@ h3, h4, h5, ol, p, dl {
 .beer_list {
   position: relative;
   z-index: 1;
-  padding: 0 5px;
-  width: 100%;
+  padding: 0 2%;
+  width: 96%;
   h2 {
     margin: 10px 0 5px;
   }
   section {
     display: flex;
     text-align: left;
-    article {
-      flex: 3 0 100%;
-      padding-left: 15px;
-      font-size: .8em !important;
-      .recipe {
-        margin-bottom: 15px;
-        .table_wrap {
-          overflow-x: scroll;
-        }
-
-        h5 {
-           font-size: 1.2em;
-           font-weight: bold;
-           margin-top: 20px;
-         }
-        dd, dt {
-          display: inline-block;
-        }
-        dd {
-          width: 80%;
-          margin: 0 0 10px 0;
-        }
-        dt {
-          font-weight: bold;
-          border-bottom: 1px dashed #CCC;
-          text-transform: uppercase;
-          width: 20%;
-        }
-        table {
-          border-bottom: 1px solid #999;
-          white-space: nowrap;
-        }
-        th {
-          background-color: #ccc;
-        }
-        th, td {
-          padding: 0 5px;
-          border-right: 2px solid white
-        }
-        > div {
-          transition: height 500ms 200ms, opacity 200ms 200ms;
-          opacity: 0.0;
-          height: 0px;
-          overflow-y: scroll;
-
-        }
-        .open {
-          height: 400px;
-          opacity: 1.0;
-
-        }
-        .close {
-          height: 0px;
-          opacity:0.0;
-        }
-
-      } /*End recipe*/
-
-      h3 {
-        background-color: #666;
-        padding: 0 5px;
-        color: wheat;
-      }
-      h4 {
-        color: maroon;
-      }
-      button {
-        font-size: 1.1em;
-        text-decoration: none;
-        margin: 10px 5px 15px 0;
-        border: 2px solid orange;
-        padding: 5px;
-        text-align: center;
-        background: wheat;
-        border-radius: 4px;
-      }
+  }
+  .img{
+    flex: 1 0 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px 0 0;
+    height: 200px;
+  }
+  article {
+    flex: 3 0 84%;
+    padding: 0 3%;
+    font-size: .8em !important;
+    p {
+      text-align: justify;
     }
-    .img{
-      flex: 1 0 10%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin: 5px 0 0;
-      height: 200px;
+    h3 {
+      background-color: #666;
+      padding: 0 5px;
+      color: wheat;
+    }
+    h4 {
+      color: maroon;
+    }
+    button {
+      font-size: 1.1em;
+      text-decoration: none;
+      margin: 10px 5px 15px 0;
+      border: 2px solid orange;
+      padding: 5px;
+      text-align: center;
+      background: wheat;
+      border-radius: 4px;
     }
   }
+  .recipe {
+    margin-bottom: 15px;
+    .table_wrap {
+      overflow-x: scroll;
+    }
+
+    h5 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    dd, dt {
+      display: inline-block;
+    }
+    dd {
+      width: 80%;
+      margin: 0 0 10px 0;
+    }
+    dt {
+      font-weight: bold;
+      border-bottom: 1px dashed #CCC;
+      text-transform: uppercase;
+      width: 20%;
+    }
+    table {
+      border-bottom: 1px solid #999;
+      white-space: nowrap;
+    }
+    th {
+      background-color: #ccc;
+    }
+    th, td {
+      padding: 0 5px;
+      border-right: 2px solid white
+    }
+    td {
+      border-right-color: beige;
+    }
+    > div {
+      transition: height 500ms 200ms, opacity 200ms 200ms;
+      opacity: 0.0;
+      height: 0px;
+      overflow-y: scroll;
+
+    }
+    .open {
+      height: 400px;
+      opacity: 1.0;
+
+    }
+    .close {
+      height: 0px;
+      opacity:0.0;
+    }
+  } /*End recipe*/
 }
 @media (max-width: 480px) {
-  .beer_list section article .recipe {
+/*  .beer_list section article .recipe {
     margin-left: -80px;
-  }
+  }*/
   .table_wrap {
-    width: 300px;
+    width: 70vw;
   }
 }
 
@@ -226,6 +231,8 @@ h3, h4, h5, ol, p, dl {
     height: 321px;
     display: block;
     padding-top: 20px;
+    padding: 15px 0 0 2%;
+    width: auto;
     section {
       height: 60px;
       width: 250px;

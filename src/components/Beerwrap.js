@@ -62,7 +62,6 @@ class BeerWrap extends Component {
         API.getBeers(query, data => {
             if('Error' in data) this.apiError = (<h2 className='error'>{data.Error}</h2>)
             this.setState({beerList: data, loading: false})
-
         })
     }
 

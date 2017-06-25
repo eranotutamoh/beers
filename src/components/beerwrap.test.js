@@ -4,18 +4,17 @@ import BeerWrap from './Beerwrap';
 import BeerForm from './Beerform';
 import BeerList from './beerlist/'
 
+let beerWrapApp
+
+beforeEach(() => beerWrapApp = shallow(<BeerWrap />))
+
 it('renders without crashing', () => {
-    shallow(<BeerWrap />);
+    shallow(<BeerWrap />)
 });
 
-it('should render a nav', () => {
-    const wrapper = shallow(
-        <nav><a href="#top">Choose your beer!!!</a></nav>
-    );
-    expect(wrapper).toMatchSnapshot();
+it('should render a nav with text', () => {
+    expect(beerWrapApp.find('nav a').text()).toEqual('Choose your beer');
 });
-
-
 
 it('should render a beer form', () => {
     const wrapper = shallow(
@@ -31,9 +30,17 @@ it('should render a beer form', () => {
 it('should render a beer list', () => {
     const wrapper = shallow(
         <BeerList beers={[]}
-                  loading={{loading: false}}
+                  loading={false}
         />
     );
     expect(wrapper).toMatchSnapshot();
 });
+
+/*it('handleNameInput', () => {
+    let wrapper = shallow(<MyComponent/>);
+    wrapper.instance().searchDish = jest.fn();
+    wrapper.update();
+    wrapper.instance().handleNameInput('BoB');
+    expect(wrapper.searchDish).toBeCalledWith('BoB');
+})*/
 
