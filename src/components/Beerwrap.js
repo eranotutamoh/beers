@@ -33,7 +33,7 @@ class BeerWrap extends Component {
     render(){
         return(
             <div className="wrap">
-                <h1>Beer O'Clock </h1>
+                <h1>Beer O Clock </h1>
                 <nav><a href="#top">Choose your beer</a></nav>
                 <BeerForm params={this.state.parameters}
                           onClick={(param) => this.changeParameters(param)}
